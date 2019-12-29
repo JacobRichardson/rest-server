@@ -1,22 +1,40 @@
 {
-  "name": "rest-server",
-  "version": "1.0.0",
-  "description": "A generic rest server to interface with database models.",
-  "main": "src/app.js",
-  "directories": {
-    "doc": "docs"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JacobRichardson/rest-server.git"
-  },
-  "author": "Jacob Richardson",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JacobRichardson/rest-server/issues"
-  },
-  "homepage": "https://github.com/JacobRichardson/rest-server#readme"
+	"name": "rest-server",
+	"version": "1.0.0",
+	"description": "A generic rest server to interface with database models.",
+	"main": "src/app.js",
+	"directories": {
+		"doc": "docs"
+	},
+	"scripts": {
+		"test": "tape src/test/**/*.js",
+		"doc": "jsdoc -c jsdoc.json",
+		"lint": "eslint --fix . && echo 'Lint complete.'",
+		"watch": "watch 'clear && npm run -s test | tap-nirvana && npm run -s lint' src"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/JacobRichardson/rest-server.git"
+	},
+	"author": "Jacob Richardson",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/JacobRichardson/rest-server/issues"
+	},
+	"homepage": "https://github.com/JacobRichardson/rest-server#readme",
+	"devDependencies": {
+		"eslint": "^6.8.0",
+		"jsdoc": "^3.6.3",
+		"tap-nirvana": "^1.1.0",
+		"watch": "^1.0.2"
+	},
+	"dependencies": {
+		"body-parser": "^1.19.0",
+		"debug": "^4.1.1",
+		"dotenv": "^8.2.0",
+		"express": "^4.17.1",
+		"jsonwebtoken": "^8.5.1",
+		"mongoose": "^5.8.3",
+		"tape": "^4.12.1"
+	}
 }
