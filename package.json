@@ -1,0 +1,22 @@
+{
+  "name": "rest-server",
+  "version": "1.0.0",
+  "description": "A generic rest server to interface with database models.",
+  "main": "src/app.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JacobRichardson/rest-server.git"
+  },
+  "author": "Jacob Richardson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JacobRichardson/rest-server/issues"
+  },
+  "homepage": "https://github.com/JacobRichardson/rest-server#readme"
+}
