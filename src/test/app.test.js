@@ -11,7 +11,10 @@ test('app complies.', t => {
 	try {
 
 		// Require in the app module.
-		require('../app');
+		const app = require('../app');
+
+		// Close the app.
+		app.close();
 
 		// Pass the test.
 		t.pass('No error requiring in the app module.');
