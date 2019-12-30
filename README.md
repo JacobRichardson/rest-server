@@ -21,16 +21,20 @@ This is how the project is used.
 This command will startup the server.
 
 ```
-node src/app.js
+node server.js
 ```
 
-This is how to require in the project and use it.
+## Helpful information
 
-```js
-// Require in the project.
-const restServer = require('rest-sever');
+- The server can be tested using the http command utility via the following:
 
-// TODO: Write more usage examples.
+```
+http GET localhost:8000/transactions
+http POST localhost:8000/transactions amount=10
+http GET localhost:8000/transactions amount=10
+http GET localhost:8000/transactions/122jasd9l30asdl (_id)
+http PATCH localhost:8000/transactions/122jasd9l30asdl amount=20
+http DELETE localhost:8000/transactions/122jasd9l30asdl
 ```
 
 ## Running the tests
@@ -38,7 +42,9 @@ const restServer = require('rest-sever');
 Here is how to run the tests:
 
 ```
+
 npm run test
+
 ```
 
 ## Deployment
