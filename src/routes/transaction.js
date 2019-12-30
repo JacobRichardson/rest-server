@@ -14,7 +14,7 @@ const TransactionService = require('../services/transaction');
 const router = express.Router();
 
 // Create a new transaction service using the transaction model.
-const transactionService = new TransactionService();
+const transactionService = new TransactionService({});
 
 // Multiple transaction get route.
 router.get('/', async (req, res) => {
