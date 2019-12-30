@@ -16,8 +16,13 @@ mongoose.set('debug', true);
 // Set connection string equal to the connection string in env or the config connection string the .
 const connectString = process.env.DATABASE_CONNECTION_STRING || config.database.connectionString;
 
-// Connect to the database with the connection string.
-mongoose.connect(connectString);
+// If connection string is truthy.
+if (connectString) {
+
+	// Connect to the database with the connection string.
+	mongoose.connect(connectString);
+}
+
 
 // Export the the transaction model.
 module.exports.transaction = require('../models/transaction');
